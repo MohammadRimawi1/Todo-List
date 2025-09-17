@@ -5,10 +5,13 @@
     --neutural-black-400: #1e1e1e;
     --neutural-black-900: #000000;
     --neutural-white: #ffffff;
-    --cyan: #138daf;
+    --ligh-cyan: #28bae3;
+    --cyan: #1e9abc;
+    --dark-cyan: #176378;
     --cyan-hover: #117996;
     --ligh-gray-100: #d1d0d0;
     --ligh-gray-400: #cbcbcb;
+    --red: #ea3b3b;
 }
 
 /* -------- GLOBAL SECTION -------- */
@@ -27,7 +30,7 @@ html {
 }
 
 section {
-    padding: 2rem 8% 2rem;
+    padding: 0 8% 2rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -35,12 +38,12 @@ section {
 
 .section-title {
     margin-bottom: 1.5rem;
-        color: var(--neutural-black-400);
+    color: var(--neutural-black-400);
 }
 
 /* -------- TODO INPUT DESIGN -------- */
 .todo-input {
-    margin-top: 2rem;
+    margin-top: 4rem;
 
     .input-container {
         border: 1px solid var(--ligh-gray-400);
@@ -76,7 +79,7 @@ section {
                 }
 
             }
-            
+
         }
 
         .add-task {
@@ -92,7 +95,53 @@ section {
             }
         }
     }
-
-
 }
 
+/* -------- TODO LIST DESIGN -------- */
+.todo-list {
+
+    .status {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+        width: 100%;
+        height: 5rem;
+
+        .status-btn {
+            position: relative;
+            flex: 1;
+            background: var(--cyan);
+            color: var(--neutural-white);
+            padding: 0.6rem;
+            border: 1px solid var(--ligh-cyan);
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        .active {
+            background: var(--dark-cyan);
+            box-shadow: -1px 4px 8px rgba(40, 186, 227, 0.5);
+            transform: translateY(-2px);
+        }
+    }
+
+    .delete-btns {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        width: 100%;
+        margin-top: 2rem;
+
+        .delete {
+            flex: 1;
+            padding: 0.4rem;
+            background: var(--red);
+            color: var(--neutural-white);
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    }
+
+}
