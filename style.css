@@ -55,7 +55,7 @@ section {
         .input-icon {
             display: flex;
             align-items: center;
-            margin-bottom: 1rem;
+            margin-bottom: 0.5rem;
 
             .icon {
                 background: var(--cyan);
@@ -83,6 +83,10 @@ section {
 
         }
 
+        .error-message {
+            color: var(--red);
+        }
+
         .add-task {
             background: var(--cyan);
             color: var(--neutural-white);
@@ -90,6 +94,7 @@ section {
             padding: 0.5rem;
             width: 100%;
             border-radius: 5px;
+            margin-top: 1rem;
 
             &:hover {
                 background: var(--cyan-hover);
@@ -132,16 +137,17 @@ section {
         overflow-y: auto;
         scroll-behavior: smooth;
         overscroll-behavior-inline: contain;
-        max-height: 40rem;
+        max-height: 35rem;
         width: 100%;
 
-        .list {
+        .todo-item {
             border: 1px solid var(--ligh-gray-400);
             border-radius: 5px;
             padding: 1rem 1.5rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            margin-bottom: 0.6rem;
 
             .list-task {
                 font-size: 1.3rem;
