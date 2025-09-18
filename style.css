@@ -12,6 +12,7 @@
     --ligh-gray-100: #d1d0d0;
     --ligh-gray-400: #cbcbcb;
     --red: #ea3b3b;
+    --pencil: #deaa39;
 }
 
 /* -------- GLOBAL SECTION -------- */
@@ -118,12 +119,58 @@ section {
             border-radius: 5px;
             cursor: pointer;
         }
-        
+
         .active {
             background: var(--dark-cyan);
             box-shadow: -1px 4px 8px rgba(40, 186, 227, 0.5);
             transform: translateY(-2px);
         }
+    }
+
+    .lists-container {
+        margin-top: 2rem;
+        overflow-y: auto;
+        scroll-behavior: smooth;
+        overscroll-behavior-inline: contain;
+        max-height: 40rem;
+        width: 100%;
+
+        .list {
+            border: 1px solid var(--ligh-gray-400);
+            border-radius: 5px;
+            padding: 1rem 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .list-task {
+                font-size: 1.3rem;
+                color: var(--neutural-black-400);
+            }
+
+            .checkers {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 0.4rem;
+                font-size: 1.4rem;
+
+                .list-checkbox {
+                    cursor: pointer;
+                }
+                
+                .list-icon-pen {
+                    cursor: pointer;
+                    color: var(--pencil);
+                }
+                
+                .list-icon-trash {
+                    cursor: pointer;
+                    color: var(--red);
+                }
+            }
+        }
+
     }
 
     .delete-btns {
